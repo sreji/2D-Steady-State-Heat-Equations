@@ -1,4 +1,4 @@
-# Solving 2D Stead State Heat Equations
+# Solving 2D Steady State Heat Equations
  
 ## Introduction
 
@@ -38,38 +38,30 @@ it in the CGSolver.
 the CGSolver. Using multiple files also creates less room for error occur while setting up the system of equations and solving
 it. 
 
+ The bonus.py file creates an animation of all the solution files for a particular input.
+
 ## Compiling and Running
   To use the code, you need to create a main program that calls in the HeatEquation2D class. First create an constructor of 
 the class in main.cpp. Then you need a file with the length, width, h, hot temperature, and cold temperature values. This file is used to call the Setup method. Then the Solve method is called on your constructor using the prefix for the solution files that you want outputted. The code is them complied using the provided  makefile. The makefile included the variable for the c++ complier, g++. It also includes the flags for the warnings we want to be raised. For this project, we are concerned about -Wall, -Wextra, and -Wconversion warnings. Our makefile also links all of the programs that have functions that we want run. It links the CGSolver, COO2CSR, matevecops, sparse, and heat files, which are all dependencies, to the main executable. 
 
-  With all of the files and makefile in the same directory, you can compile the code by calling make. Then to run the code we use " ./main $<$input file$>$ $<$solution prefix$>$ ". To run the post processing python file, we need to use "  python3 postprocess.py $<$input file$>$ $<$solution file$>$ ". Finally to visualize our results, the python program outputs a pseudo color plot of the temperature distribution and the mean temperature isoline. The following is a sample result given input2 and solution157 as the inputs to the program.
+  With all of the files and makefile in the same directory, you can compile the code by calling make. Then to run the code we use " ./main $<$input file$>$ $<$solution prefix$>$ ". 
   
- ![alt text](‎⁨iCloud Drive⁩ ▸ ⁨Desktop⁩ ▸ first_image.png⁩) 
-
-\includegraphics[width=0.8\textwidth]{/Users/sreji/Desktop/PlotOutput.png}
-
-\tab To run the bonus.py, an input file and a folder with all of the solution files for that input need to be passed as parameters.
-We use "  python3 bonus.py $<$input file$>$ $<$solution files folder$>$ ". In order for this code to run, the ffmpeg package needs to be 
-installed to save a mp4. On corn this is not possible, since we cannot change anything. The console should look like this: \newline
-
-\includegraphics[width=0.8\textwidth]{/Users/sreji/Desktop/BonusOutput.png}
-
-\tab \newpage The next three images show the progression of the animation for input2. The animation for input2 is also saved in the 
-GitHub repository. \newline 
-
-\includegraphics[width=0.3\textwidth]{/Users/sreji/Desktop/BegOutput.png} \newline
-
-\includegraphics[width=0.3\textwidth]{/Users/sreji/Desktop/MiddleOutput.png} \newline
-
-\includegraphics[width=0.3\textwidth]{/Users/sreji/Desktop/EndOutput.png}
-
-
-\begin{thebibliography}{1}
-
-  \bibitem{notes} Patrick LeGresley, {\em CME 211: Project Part 1}  2017 .
-
-  \bibitem{impj}  Patrick LeGresley {\em CME 211: Project Part 2} 2017. 
+  To run the post processing python file, we need to use "  python3 postprocess.py $<$input file$>$ $<$solution file$>$ ". 
   
- \end{thebibliography}
+  Finally to visualize our results, the python program outputs a pseudo color plot of the temperature distribution and the mean temperature isoline. The following is a sample result given input2 and solution157 as the inputs to the program.
+  
+ ![alt text](https://github.com/sreji/2D-Steady-State-Heat-Equations/blob/master/image1.png) 
 
-\end{document}  
+
+To run the bonus.py, an input file and a folder with all of the solution files for that input need to be passed as parameters.
+We use "  python3 bonus.py $<$input file$>$ $<$solution files folder$>$ ". In order for this code to run, the ffmpeg package needs to be installed to save a mp4. 
+
+ The next three images show the progression of the animation for input2. 
+
+ ![alt text](https://github.com/sreji/2D-Steady-State-Heat-Equations/blob/master/image2.png) 
+ 
+ ![alt text](https://github.com/sreji/2D-Steady-State-Heat-Equations/blob/master/image3.png) 
+ 
+ ![alt text](https://github.com/sreji/2D-Steady-State-Heat-Equations/blob/master/image4.png) 
+   
+ 
