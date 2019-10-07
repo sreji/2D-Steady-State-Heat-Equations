@@ -46,7 +46,7 @@ the class in main.cpp. Then you need a file with the length, width, h, hot tempe
 
   With all of the files and makefile in the same directory, you can compile the code by calling make. Then to run the code we use " ./main $<$input file$>$ $<$solution prefix$>$ ". 
   
-  To run the post processing python file, we need to use "  python3 postprocess.py $<$input file$>$ $<$solution file$>$ ". 
+ To run the post processing python file, we need to use "python3 postprocess.py $<$input file$>$ $<$solution file$>$ ". 
   
   Finally to visualize our results, the python program outputs a pseudo color plot of the temperature distribution and the mean temperature isoline. The following is a sample result given input2 and solution157 as the inputs to the program.
   
